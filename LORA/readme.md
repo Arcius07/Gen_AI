@@ -1,10 +1,10 @@
-#📘 Fine-Tuning GPT-2 Using LoRA (Low-Rank Adaptation)
+# 📘 Fine-Tuning GPT-2 Using LoRA (Low-Rank Adaptation)
 
 This project demonstrates how to fine-tune a GPT-2 language model using LoRA (Low-Rank Adaptation) — a lightweight technique that trains only a small percentage of model parameters while keeping the full model frozen.
 
 LoRA makes training faster, cheaper, and more accessible, even on limited hardware like Google Colab.
 
-#🚀 Project Overview
+# 🚀 Project Overview
 
 In this example, I fine-tuned GPT-2 on a small custom dataset (football.txt) using the PEFT (Parameter-Efficient Fine-Tuning) library.
 The goal was to learn how LoRA works and apply it to a real dataset.
@@ -14,12 +14,12 @@ The goal was to learn how LoRA works and apply it to a real dataset.
 ├── lora_fine_tuning.ipynb # Notebook with training code
 └── Lora_football/        # Saved LoRA checkpoint
 ```
-#🧠 Key Concepts Learned
-##✔️ What is LoRA?
+# 🧠 Key Concepts Learned
+## ✔️ What is LoRA?
 
 A method to fine-tune large language models by training only rank-decomposed matrices inside attention layers.
 
-##✔️ Why LoRA?
+## ✔️ Why LoRA?
 
 Reduces trainable parameters by 99%+
 
@@ -29,11 +29,11 @@ Lower GPU/VRAM usage
 
 Works with small datasets
 
-##✔️ How LoRA is applied in GPT-2
+## ✔️ How LoRA is applied in GPT-2
 
 Only the attention layers (c_attn) are updated while the base model stays frozen.
 
-#🛠️ Tech Stack
+# 🛠️ Tech Stack
 
 Python
 
@@ -45,11 +45,11 @@ Datasets
 
 Google Colab GPU
 
-#🔧 Installation
+# 🔧 Installation
 ```bash
 pip install transformers datasets peft accelerate
 ```
-#📘 Training Code (Core Section)
+# 📘 Training Code (Core Section)
 🔹 Load Dataset
 ```bash
 from datasets import load_dataset
@@ -107,13 +107,13 @@ from transformers import pipeline
 generator = pipeline("text-generation", model="./Lora_football", tokenizer=tokenizer)
 
 print(generator("When was the world cup", max_length=100, do_sample=True)[0]['generated_text'])
-``
-#📈 Results
+```
+# 📈 Results
 
 Even with a tiny dataset, the LoRA model adapted and produced football-related completions.
 More data = better results, but this was a perfect hands-on introduction to LoRA fine-tuning.
 
-#🎯 What I Learned
+# 🎯 What I Learned
 
 How GPT-2 tokenization, attention layers, and LM training work
 
@@ -123,7 +123,7 @@ How to build a custom dataset for language modeling
 
 How to train and evaluate a PEFT model
 
-#⭐ Future Improvements
+# ⭐ Future Improvements
 
 Use a larger football dataset
 
@@ -133,6 +133,6 @@ Convert LoRA + GPT-2 into a chatbot
 
 Push the model to HuggingFace Hub
 
-#🙌 Acknowledgements
+# 🙌 Acknowledgements
 
 Thanks to HuggingFace for providing open-source tools that make model fine-tuning accessible to everyone.
