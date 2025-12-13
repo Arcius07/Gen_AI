@@ -25,61 +25,66 @@ Google Generative AI (Gemini)
 
 python-dotenv
 ```
-📂 Project Structure
+# 📂 Project Structure
+```
 .
 ├── chatbot.py          # Main chatbot script
 ├── .env                # Environment variables (API key)
 ├── requirements.txt    # Python dependencies
 └── README.md           # Project documentation
-
-🔑 Prerequisites
+```
+# 🔑 Prerequisites
 
 Python installed (3.9 or above)
 
 A Google Generative AI API key
 
-⚙️ Installation
-1️⃣ Clone the Repository
+# ⚙️ Installation
+
+## 1️⃣ Clone the Repository
+```
 git clone https://github.com/your-username/gemini-politeness-chatbot.git
 cd gemini-politeness-chatbot
-
-2️⃣ Create a Virtual Environment (Recommended)
+```
+## 2️⃣ Create a Virtual Environment (Recommended)
+```
 python -m venv venv
 source venv/bin/activate   # On Windows: venv\Scripts\activate
-
-3️⃣ Install Dependencies
+```
+## 3️⃣ Install Dependencies
+```
 pip install -r requirements.txt
-
-🔐 Environment Setup
-
+```
+# 🔐 Environment Setup
+```
 Create a .env file in the project root:
 
 GOOGLE_API_KEY=your_google_api_key_here
+```
 
-
-⚠️ Never commit your .env file to GitHub
-
-▶️ Running the Chatbot
+# ▶️ Running the Chatbot
+```
 python chatbot.py
-
+```
 
 You’ll see:
 
 🤖 Polite Gemini Assistant | Type 'exit' to quit
 
-💬 Example Interaction
+# 💬 Example Interaction
+```
 You: Explain what machine learning is
 Assistant: Machine learning is a branch of artificial intelligence that enables
 computers to learn from data and improve their performance without being
 explicitly programmed.
-
+```
 
 To exit:
 
 You: exit
 👋 Goodbye! Have a nice day.
 
-🧠 Prompt Design
+# 🧠 Prompt Design
 
 The assistant follows a system prompt:
 
@@ -95,7 +100,7 @@ Clear explanations
 
 User-friendly responses
 
-🚀 Possible Improvements
+# 🚀 Possible Improvements
 
 Add conversation memory
 
