@@ -44,3 +44,33 @@ Useful for long-running conversations.
 
 ## 📂 Project Structure
 
+---
+
+## 🔑 Setup Instructions
+
+### 1️⃣ Clone the Repository
+```bash
+git clone <your-repo-link>
+cd memory-gemini-chatbot
+```
+### 2️⃣ Create Virtual Environment (Optional)
+```
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+```
+### 3️⃣ Install Dependencies
+```
+pip install langchain langchain-google-genai python-dotenv
+```
+### 4️⃣ Set Environment Variables
+```
+Create a .env file:
+
+GOOGLE_API_KEY=your_google_api_key_here
+```
+### ▶️ Run the Chatbot
+```
+python chatbot.py
+
+Type exit or quit to stop the chatbot.
+```
